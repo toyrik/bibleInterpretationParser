@@ -29,7 +29,7 @@
         foreach($lines as $idx => $line) {
           $line = iconv('Windows-1251', 'UTF-8', $line); //Конвертируем элементы в удобочитаемую кодировку
 
-          if (preg_match('/<H2>([А-Яа-я\s]*)/', $line, $matches)) {// Считаем главы
+          if (preg_match('/<[hH]2>([0-9А-Яа-я\s]*)/', $line, $matches)) {// Считаем главы
             $chapter++;
             $continue = true;
             $verse = 0;
